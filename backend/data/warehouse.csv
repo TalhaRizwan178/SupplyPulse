@@ -1,0 +1,41 @@
+sku,product_name,category,qty_on_hand,pending_dispatch,reorder_level,last_recount_date,warehouse,unit_cost_pkr,supplier,note
+LAYS-MAS-70,Lays Masala 70g,Snacks,412,270,200,2026-05-17T18:00:00Z,Central Warehouse Karachi,680,Pepsi Direct,Manual count — system not updated after Tue AM dispatch
+LAYS-CHE-40,Lays Cheese & Onion 40g,Snacks,840,120,300,2026-05-18T06:00:00Z,Central Warehouse Karachi,390,Pepsi Direct,Auto-synced
+LAYS-SAL-70,Lays Salt 70g,Snacks,560,80,200,2026-05-18T06:00:00Z,Central Warehouse Karachi,680,Pepsi Direct,Auto-synced
+LAYS-BBQ-40,Lays BBQ 40g,Snacks,1200,200,400,2026-05-18T06:00:00Z,Central Warehouse Karachi,390,Pepsi Direct,Auto-synced
+KURK-MAS-42,Kurkure Masala Munch 42g,Snacks,320,40,250,2026-05-18T06:00:00Z,Central Warehouse Karachi,420,Pepsi Direct,Auto-synced
+KURK-CHE-42,Kurkure Chilli Chatka 42g,Snacks,480,60,250,2026-05-18T06:00:00Z,Central Warehouse Karachi,420,Pepsi Direct,Auto-synced
+DORITOS-NACHOs-40,Doritos Nacho Cheese 40g,Snacks,290,30,200,2026-05-18T06:00:00Z,Central Warehouse Karachi,450,Pepsi Direct,Auto-synced
+CHEETOS-PF-27,Cheetos Puff 27g,Snacks,670,90,300,2026-05-18T06:00:00Z,Central Warehouse Karachi,250,Pepsi Direct,Auto-synced
+PEPSI-RG-500,Pepsi Regular 500ml,Beverages,2400,600,1000,2026-05-18T06:00:00Z,Beverage Cold Store,120,Pepsi Direct,Chilled storage — auto-synced
+PEPSI-RG-1500,Pepsi Regular 1.5L,Beverages,1800,400,800,2026-05-18T06:00:00Z,Beverage Cold Store,220,Pepsi Direct,Auto-synced
+PEPSI-DIET-500,Pepsi Diet 500ml,Beverages,900,100,400,2026-05-18T06:00:00Z,Beverage Cold Store,130,Pepsi Direct,Auto-synced
+MTNDEV-500,Mountain Dew 500ml,Beverages,3100,700,1200,2026-05-18T06:00:00Z,Beverage Cold Store,120,Pepsi Direct,Auto-synced
+MTNDEV-1500,Mountain Dew 1.5L,Beverages,2200,500,900,2026-05-18T06:00:00Z,Beverage Cold Store,220,Pepsi Direct,Auto-synced
+7UP-500,7UP 500ml,Beverages,1400,300,600,2026-05-18T06:00:00Z,Beverage Cold Store,120,Pepsi Direct,Auto-synced
+MIRINDA-ORG-500,Mirinda Orange 500ml,Beverages,800,100,400,2026-05-18T06:00:00Z,Beverage Cold Store,120,Pepsi Direct,Auto-synced
+STING-250,Sting Energy 250ml,Beverages,600,80,300,2026-05-18T06:00:00Z,Beverage Cold Store,160,Pepsi Direct,Near reorder level — monitor
+LIPTON-YBKTEA-24,Lipton Yellow Label 24s,Grocery,1100,150,400,2026-05-18T06:00:00Z,Central Warehouse Karachi,950,Unilever,Auto-synced
+LIPTON-GRTEA-25,Lipton Green Tea 25s,Grocery,540,60,200,2026-05-18T06:00:00Z,Central Warehouse Karachi,720,Unilever,Auto-synced
+KNORR-NOODLES-66,Knorr Chicken Noodles 66g,Grocery,1800,300,600,2026-05-18T06:00:00Z,Central Warehouse Karachi,180,Unilever,Auto-synced
+SURF-EXCEL-800,Surf Excel Washing Powder 800g,Household,620,80,250,2026-05-18T06:00:00Z,Central Warehouse Karachi,890,Unilever,Auto-synced
+COMFORT-200,Comfort Fabric Conditioner 200ml,Household,480,40,200,2026-05-18T06:00:00Z,Central Warehouse Karachi,450,Unilever,Auto-synced
+LIFEBUOY-175,Lifebuoy Soap 175g,Personal Care,2200,400,800,2026-05-18T06:00:00Z,Central Warehouse Karachi,150,Unilever,Auto-synced
+DOVE-SOAP-75,Dove Beauty Bar 75g,Personal Care,860,100,300,2026-05-18T06:00:00Z,Central Warehouse Karachi,280,Unilever,Auto-synced
+CLOSE-UP-80,Close-Up Toothpaste 80g,Personal Care,1100,150,400,2026-05-18T06:00:00Z,Central Warehouse Karachi,260,Unilever,Auto-synced
+PEEK-FREANS-MARIE-113,Peek Freans Marie Biscuit 113g,Snacks,1400,200,500,2026-05-18T06:00:00Z,Central Warehouse Karachi,145,EBM,Auto-synced
+PEEK-FREANS-GLUCO-152,Peek Freans Gluco 152g,Snacks,1700,250,600,2026-05-18T06:00:00Z,Central Warehouse Karachi,170,EBM,Auto-synced
+BISCONNI-COCOMO-80,Bisconni Cocomo 80g,Snacks,950,120,350,2026-05-18T06:00:00Z,Central Warehouse Karachi,190,Bisconni,Auto-synced
+BISCONNI-CHOCOLATO-80,Bisconni Chocolato 80g,Snacks,780,80,300,2026-05-18T06:00:00Z,Central Warehouse Karachi,190,Bisconni,Auto-synced
+GOURMET-KETCHUP-500,Gourmet Tomato Ketchup 500g,Grocery,440,50,200,2026-05-18T06:00:00Z,Central Warehouse Karachi,380,Gourmet Foods,Auto-synced
+NESTLE-JUICE-MANGO-200,Nestle Juice Mango 200ml,Beverages,3200,800,1200,2026-05-18T06:00:00Z,Beverage Cold Store,95,Nestle,High season — auto-synced
+NESTLE-JUICE-GUAVA-200,Nestle Juice Guava 200ml,Beverages,2800,600,1100,2026-05-18T06:00:00Z,Beverage Cold Store,95,Nestle,Auto-synced
+TAPAL-TEZDUM-95,Tapal Tez Dam 95g,Grocery,2100,300,700,2026-05-18T06:00:00Z,Central Warehouse Karachi,380,Tapal,Auto-synced
+TAPAL-FAMILY-190,Tapal Family Mixture 190g,Grocery,1600,200,600,2026-05-18T06:00:00Z,Central Warehouse Karachi,680,Tapal,Auto-synced
+OLPER-MILK-1L,Olper Milk 1L,Dairy,980,180,400,2026-05-18T07:30:00Z,Dairy Cold Store,195,Engro Foods,Near reorder — refill due Wed
+OLPER-CREAM-200,Olper Cream 200ml,Dairy,420,50,200,2026-05-18T07:30:00Z,Dairy Cold Store,280,Engro Foods,Auto-synced
+FRESHMILK-HALEEB-1L,Haleeb Fresh Milk 1L,Dairy,640,100,300,2026-05-18T07:30:00Z,Dairy Cold Store,210,Haleeb Foods,Auto-synced
+LAYS-FRENCH-70,Lays French Cheese 70g,Snacks,155,60,200,2026-05-17T20:00:00Z,Central Warehouse Karachi,680,Pepsi Direct,LOW STOCK — below reorder. Pending supplier confirmation.
+KURKURE-TRIANGLES-20,Kurkure Triangles 20g,Snacks,2400,400,800,2026-05-18T06:00:00Z,Central Warehouse Karachi,120,Pepsi Direct,Auto-synced
+PEPSI-CAN-250,Pepsi Can 250ml,Beverages,1600,300,700,2026-05-18T06:00:00Z,Beverage Cold Store,170,Pepsi Direct,Auto-synced
+MTNDEV-CAN-250,Mountain Dew Can 250ml,Beverages,1900,350,800,2026-05-18T06:00:00Z,Beverage Cold Store,170,Pepsi Direct,Auto-synced

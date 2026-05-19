@@ -1,0 +1,132 @@
+{
+  "inbox_synced_at": "2026-05-18T09:00:00Z",
+  "monitored_inboxes": ["orders@distco-khi.com", "procurement@distco-khi.com"],
+  "threads": [
+    {
+      "thread_id": "TH-4821",
+      "subject": "RE: LAYS-MAS-70 Replenishment Order #4821",
+      "sku": "LAYS-MAS-70",
+      "supplier": "Pepsi Direct (Supplier A)",
+      "supplier_email": "orders@pepsidirect.com.pk",
+      "messages": [
+        {
+          "from": "procurement@distco-khi.com",
+          "to": "orders@pepsidirect.com.pk",
+          "sent_at": "2026-05-16T10:00:00Z",
+          "body": "Hi team, we need an urgent replenishment for LAYS-MAS-70. Current stock is running low. Please confirm availability of 800 units and earliest possible dispatch date. PO-4821 attached."
+        },
+        {
+          "from": "orders@pepsidirect.com.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-16T14:30:00Z",
+          "body": "Dear DistCo team, we acknowledge PO-4821 for 800 units LAYS-MAS-70. We will dispatch from Lahore on Tuesday morning (18 May). Expected delivery Karachi by Thursday evening (19 May, ETA 17:00). Please confirm receipt."
+        },
+        {
+          "from": "procurement@distco-khi.com",
+          "to": "orders@pepsidirect.com.pk",
+          "sent_at": "2026-05-17T09:00:00Z",
+          "body": "Confirmed. Please ensure the shipment is dispatched as planned. We are critically low on stock in Karachi North."
+        },
+        {
+          "from": "orders@pepsidirect.com.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-18T09:00:00Z",
+          "body": "Dear team, we have shipped 800 units of LAYS-MAS-70 on Tuesday as planned. LR# LH-KHI-80421. Expected delivery Thursday PM (ETA 17:00). Please note there may be delays due to road conditions on N-55. We will update if ETA changes."
+        }
+      ],
+      "latest_message_at": "2026-05-18T09:00:00Z",
+      "units_confirmed": 800,
+      "promised_eta": "2026-05-19T17:00:00Z",
+      "lr_number": "LH-KHI-80421",
+      "confidence": "medium",
+      "risk_flags": ["N-55 delay mentioned", "ETA not GPS-verified", "Strike not acknowledged by supplier"]
+    },
+    {
+      "thread_id": "TH-4820",
+      "subject": "Mehran Foods — Backup PO Draft for LAYS-MAS-70 equivalent",
+      "sku": "LAYS-MAS-70",
+      "supplier": "Mehran Foods (Supplier B)",
+      "supplier_email": "sales@mehranfoods.pk",
+      "messages": [
+        {
+          "from": "procurement@distco-khi.com",
+          "to": "sales@mehranfoods.pk",
+          "sent_at": "2026-05-15T11:00:00Z",
+          "body": "Hi Mehran Foods, following up on last month's discussion. We'd like to keep a backup PO draft ready for 400 units of your Masala Snack 70g (comparable to LAYS-MAS-70) at PKR 800/unit. Can you confirm availability and lead time?"
+        },
+        {
+          "from": "sales@mehranfoods.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-15T15:00:00Z",
+          "body": "Dear DistCo, we confirm availability of 400+ units. Price: PKR 800/unit. Lead time from activation: 4 hours (Karachi warehouse). We can execute on a phone call. PO-DRAFT-B-4822 is ready on our side."
+        }
+      ],
+      "latest_message_at": "2026-05-15T15:00:00Z",
+      "draft_po_id": "PO-DRAFT-B-4822",
+      "units_available": 400,
+      "price_per_unit_pkr": 800,
+      "lead_time_hours": 4,
+      "confidence": "high",
+      "notes": "Backup supplier confirmed. Can activate within 4 hours. Cost delta +PKR 8,000 vs Supplier A."
+    },
+    {
+      "thread_id": "TH-4819",
+      "subject": "PEPSI-RG-500 Replenishment Order #4819 — Delivered",
+      "sku": "PEPSI-RG-500",
+      "supplier": "Pepsi Direct (Supplier A)",
+      "supplier_email": "orders@pepsidirect.com.pk",
+      "messages": [
+        {
+          "from": "orders@pepsidirect.com.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-17T08:00:00Z",
+          "body": "PO-4819 delivered. 2400 units PEPSI-RG-500 received at Central Warehouse at 07:45. Please sign GRN."
+        }
+      ],
+      "latest_message_at": "2026-05-17T08:00:00Z",
+      "status": "delivered",
+      "units_delivered": 2400,
+      "confidence": "confirmed"
+    },
+    {
+      "thread_id": "TH-4818",
+      "subject": "MTNDEV-500 Standing Order — Weekly Replenishment",
+      "sku": "MTNDEV-500",
+      "supplier": "Pepsi Direct (Supplier A)",
+      "supplier_email": "orders@pepsidirect.com.pk",
+      "messages": [
+        {
+          "from": "orders@pepsidirect.com.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-18T07:00:00Z",
+          "body": "Weekly standing order for MTNDEV-500 confirmed. 3100 units dispatched from Karachi facility. ETA same day 14:00. Note: next week's shipment may be delayed due to Lahore production issues."
+        }
+      ],
+      "latest_message_at": "2026-05-18T07:00:00Z",
+      "units_in_transit": 3100,
+      "promised_eta": "2026-05-18T14:00:00Z",
+      "confidence": "high",
+      "notes": "Dispatched from Karachi facility — not affected by Lahore strike"
+    },
+    {
+      "thread_id": "TH-ALERT-01",
+      "subject": "URGENT: Production Disruption — Lahore Snack Lines",
+      "sku": "ALL_LAHORE_SNACKS",
+      "supplier": "Pepsi Direct (Supplier A)",
+      "supplier_email": "operations@pepsidirect.com.pk",
+      "messages": [
+        {
+          "from": "operations@pepsidirect.com.pk",
+          "to": "procurement@distco-khi.com",
+          "sent_at": "2026-05-18T07:30:00Z",
+          "body": "URGENT: Our Lahore manufacturing facility is experiencing a partial work stoppage. Snack production lines (Lays, Kurkure, Cheetos, Doritos) are impacted. We are working to resolve but cannot guarantee dispatch timelines for orders depending on Lahore production. Orders already in transit are unaffected. New orders for Lahore-manufactured SKUs will be delayed minimum 48-72 hours. We apologize for the inconvenience and will provide updates every 6 hours."
+        }
+      ],
+      "latest_message_at": "2026-05-18T07:30:00Z",
+      "affected_skus": ["LAYS-MAS-70", "LAYS-CHE-40", "LAYS-SAL-70", "LAYS-BBQ-40", "KURK-MAS-42", "KURK-CHE-42", "CHEETOS-PF-27", "DORITOS-NACHOs-40"],
+      "impact": "48-72 hour delay on new orders for Lahore-manufactured SKUs",
+      "confidence": "confirmed",
+      "severity": "high"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "feed_timestamp": "2026-05-18T09:58:00Z",
+  "region": "Karachi North",
+  "total_reporting_outlets": 38,
+  "outlets": [
+    {
+      "outlet_id": "OUT-001", "name": "Imtiaz Superstore DHA", "area": "DHA Phase 5",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 48, "sold_last_6h": 14, "velocity_per_hour": 2.0, "last_sale_at": "2026-05-18T09:32:00Z" },
+        { "sku": "LAYS-CHE-40", "shelf_units": 24, "sold_last_24h": 32, "sold_last_6h": 8, "velocity_per_hour": 1.3 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 84, "sold_last_24h": 120, "sold_last_6h": 31, "velocity_per_hour": 5.0 },
+        { "sku": "MTNDEV-500", "shelf_units": 102, "sold_last_24h": 145, "sold_last_6h": 38, "velocity_per_hour": 6.0 },
+        { "sku": "KURK-MAS-42", "shelf_units": 18, "sold_last_24h": 28, "sold_last_6h": 6, "velocity_per_hour": 1.2 },
+        { "sku": "KNORR-NOODLES-66", "shelf_units": 72, "sold_last_24h": 55, "sold_last_6h": 12, "velocity_per_hour": 2.3 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-002", "name": "Imtiaz Superstore Gulshan", "area": "Gulshan-e-Iqbal",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 62, "sold_last_6h": 18, "velocity_per_hour": 2.6, "last_sale_at": "2026-05-18T09:18:00Z" },
+        { "sku": "LAYS-CHE-40", "shelf_units": 36, "sold_last_24h": 41, "sold_last_6h": 10, "velocity_per_hour": 1.7 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 96, "sold_last_24h": 138, "sold_last_6h": 35, "velocity_per_hour": 5.8 },
+        { "sku": "MTNDEV-500", "shelf_units": 88, "sold_last_24h": 122, "sold_last_6h": 30, "velocity_per_hour": 5.1 },
+        { "sku": "KURK-MAS-42", "shelf_units": 22, "sold_last_24h": 30, "sold_last_6h": 7, "velocity_per_hour": 1.3 },
+        { "sku": "LIPTON-YBKTEA-24", "shelf_units": 45, "sold_last_24h": 22, "sold_last_6h": 5, "velocity_per_hour": 0.9 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-003", "name": "Metro Cash & Carry Clifton", "area": "Clifton",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 74, "sold_last_6h": 22, "velocity_per_hour": 3.1, "last_sale_at": "2026-05-18T09:44:00Z" },
+        { "sku": "LAYS-SAL-70", "shelf_units": 30, "sold_last_24h": 38, "sold_last_6h": 9, "velocity_per_hour": 1.6 },
+        { "sku": "PEPSI-RG-1500", "shelf_units": 110, "sold_last_24h": 95, "sold_last_6h": 24, "velocity_per_hour": 4.0 },
+        { "sku": "MTNDEV-1500", "shelf_units": 98, "sold_last_24h": 88, "sold_last_6h": 22, "velocity_per_hour": 3.7 },
+        { "sku": "DORITOS-NACHOs-40", "shelf_units": 28, "sold_last_24h": 35, "sold_last_6h": 9, "velocity_per_hour": 1.5 },
+        { "sku": "SURF-EXCEL-800", "shelf_units": 64, "sold_last_24h": 41, "sold_last_6h": 10, "velocity_per_hour": 1.7 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-004", "name": "Naheed Super Market FB Area", "area": "Federal B Area",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 55, "sold_last_6h": 16, "velocity_per_hour": 2.3, "last_sale_at": "2026-05-18T08:55:00Z" },
+        { "sku": "LAYS-BBQ-40", "shelf_units": 58, "sold_last_24h": 44, "sold_last_6h": 11, "velocity_per_hour": 1.8 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 72, "sold_last_24h": 108, "sold_last_6h": 27, "velocity_per_hour": 4.5 },
+        { "sku": "7UP-500", "shelf_units": 48, "sold_last_24h": 62, "sold_last_6h": 16, "velocity_per_hour": 2.6 },
+        { "sku": "CHEETOS-PF-27", "shelf_units": 44, "sold_last_24h": 52, "sold_last_6h": 13, "velocity_per_hour": 2.2 },
+        { "sku": "KNORR-NOODLES-66", "shelf_units": 88, "sold_last_24h": 60, "sold_last_6h": 15, "velocity_per_hour": 2.5 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-005", "name": "Chase Up North Nazimabad", "area": "North Nazimabad",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 41, "sold_last_6h": 12, "velocity_per_hour": 1.7, "last_sale_at": "2026-05-18T08:40:00Z" },
+        { "sku": "LAYS-CHE-40", "shelf_units": 20, "sold_last_24h": 26, "sold_last_6h": 6, "velocity_per_hour": 1.1 },
+        { "sku": "MTNDEV-500", "shelf_units": 68, "sold_last_24h": 95, "sold_last_6h": 24, "velocity_per_hour": 4.0 },
+        { "sku": "STING-250", "shelf_units": 34, "sold_last_24h": 48, "sold_last_6h": 12, "velocity_per_hour": 2.0 },
+        { "sku": "KURK-CHE-42", "shelf_units": 26, "sold_last_24h": 32, "sold_last_6h": 8, "velocity_per_hour": 1.3 },
+        { "sku": "BISCONNI-COCOMO-80", "shelf_units": 42, "sold_last_24h": 38, "sold_last_6h": 9, "velocity_per_hour": 1.6 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-006", "name": "Carrefour Tariq Road", "area": "Tariq Road",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 0, "sold_last_24h": 88, "sold_last_6h": 26, "velocity_per_hour": 3.7, "last_sale_at": "2026-05-18T09:50:00Z" },
+        { "sku": "LAYS-SAL-70", "shelf_units": 22, "sold_last_24h": 42, "sold_last_6h": 11, "velocity_per_hour": 1.8 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 140, "sold_last_24h": 200, "sold_last_6h": 50, "velocity_per_hour": 8.3 },
+        { "sku": "MTNDEV-500", "shelf_units": 130, "sold_last_24h": 188, "sold_last_6h": 47, "velocity_per_hour": 7.8 },
+        { "sku": "DORITOS-NACHOs-40", "shelf_units": 18, "sold_last_24h": 44, "sold_last_6h": 11, "velocity_per_hour": 1.8 },
+        { "sku": "SURF-EXCEL-800", "shelf_units": 88, "sold_last_24h": 55, "sold_last_6h": 14, "velocity_per_hour": 2.3 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-007", "name": "Agha's Supermarket PECHS", "area": "PECHS",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 8, "sold_last_24h": 36, "sold_last_6h": 10, "velocity_per_hour": 1.5 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 55, "sold_last_24h": 80, "sold_last_6h": 20, "velocity_per_hour": 3.3 },
+        { "sku": "MTNDEV-500", "shelf_units": 62, "sold_last_24h": 88, "sold_last_6h": 22, "velocity_per_hour": 3.7 },
+        { "sku": "LIPTON-YBKTEA-24", "shelf_units": 30, "sold_last_24h": 18, "sold_last_6h": 4, "velocity_per_hour": 0.8 },
+        { "sku": "KNORR-NOODLES-66", "shelf_units": 55, "sold_last_24h": 42, "sold_last_6h": 11, "velocity_per_hour": 1.8 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-008", "name": "Al-Fatah Stadium Road", "area": "Saddar",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 4, "sold_last_24h": 28, "sold_last_6h": 8, "velocity_per_hour": 1.2 },
+        { "sku": "LAYS-BBQ-40", "shelf_units": 40, "sold_last_24h": 30, "sold_last_6h": 7, "velocity_per_hour": 1.3 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 45, "sold_last_24h": 65, "sold_last_6h": 16, "velocity_per_hour": 2.7 },
+        { "sku": "CHEETOS-PF-27", "shelf_units": 38, "sold_last_24h": 44, "sold_last_6h": 11, "velocity_per_hour": 1.8 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-009", "name": "Naheed Super Market Clifton", "area": "Clifton",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 6, "sold_last_24h": 44, "sold_last_6h": 13, "velocity_per_hour": 1.8 },
+        { "sku": "LAYS-CHE-40", "shelf_units": 28, "sold_last_24h": 34, "sold_last_6h": 8, "velocity_per_hour": 1.4 },
+        { "sku": "PEPSI-DIET-500", "shelf_units": 36, "sold_last_24h": 40, "sold_last_6h": 10, "velocity_per_hour": 1.7 },
+        { "sku": "DOVE-SOAP-75", "shelf_units": 24, "sold_last_24h": 16, "sold_last_6h": 4, "velocity_per_hour": 0.7 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-010", "name": "Macro Mart Hyderabad Road", "area": "Landhi",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 12, "sold_last_24h": 38, "sold_last_6h": 10, "velocity_per_hour": 1.6 },
+        { "sku": "KURK-MAS-42", "shelf_units": 22, "sold_last_24h": 28, "sold_last_6h": 7, "velocity_per_hour": 1.2 },
+        { "sku": "MTNDEV-500", "shelf_units": 72, "sold_last_24h": 98, "sold_last_6h": 25, "velocity_per_hour": 4.1 },
+        { "sku": "TAPAL-TEZDUM-95", "shelf_units": 66, "sold_last_24h": 38, "sold_last_6h": 10, "velocity_per_hour": 1.6 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-011", "name": "Shaheen Chemist PECHS", "area": "PECHS",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 2, "sold_last_24h": 18, "sold_last_6h": 5, "velocity_per_hour": 0.8 },
+        { "sku": "LIFEBUOY-175", "shelf_units": 80, "sold_last_24h": 40, "sold_last_6h": 10, "velocity_per_hour": 1.7 },
+        { "sku": "CLOSE-UP-80", "shelf_units": 60, "sold_last_24h": 32, "sold_last_6h": 8, "velocity_per_hour": 1.3 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-012", "name": "Lucky Star Orangi Town", "area": "Orangi Town",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 16, "sold_last_24h": 42, "sold_last_6h": 11, "velocity_per_hour": 1.8 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 60, "sold_last_24h": 88, "sold_last_6h": 22, "velocity_per_hour": 3.7 },
+        { "sku": "KNORR-NOODLES-66", "shelf_units": 70, "sold_last_24h": 48, "sold_last_6h": 12, "velocity_per_hour": 2.0 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-013", "name": "Al-Asif Square Superstore", "area": "Sohrab Goth",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 20, "sold_last_24h": 50, "sold_last_6h": 13, "velocity_per_hour": 2.1 },
+        { "sku": "MTNDEV-500", "shelf_units": 55, "sold_last_24h": 75, "sold_last_6h": 19, "velocity_per_hour": 3.1 },
+        { "sku": "TAPAL-TEZDUM-95", "shelf_units": 48, "sold_last_24h": 28, "sold_last_6h": 7, "velocity_per_hour": 1.2 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-014", "name": "D-Mart Korangi", "area": "Korangi",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 10, "sold_last_24h": 32, "sold_last_6h": 9, "velocity_per_hour": 1.3 },
+        { "sku": "PEPSI-RG-500", "shelf_units": 50, "sold_last_24h": 72, "sold_last_6h": 18, "velocity_per_hour": 3.0 },
+        { "sku": "OLPER-MILK-1L", "shelf_units": 40, "sold_last_24h": 55, "sold_last_6h": 14, "velocity_per_hour": 2.3 }
+      ]
+    },
+    {
+      "outlet_id": "OUT-015", "name": "Sunday Bazaar Gulistan-e-Johar", "area": "Gulistan-e-Johar",
+      "skus": [
+        { "sku": "LAYS-MAS-70", "shelf_units": 18, "sold_last_24h": 45, "sold_last_6h": 12, "velocity_per_hour": 1.9 },
+        { "sku": "KURK-MAS-42", "shelf_units": 30, "sold_last_24h": 36, "sold_last_6h": 9, "velocity_per_hour": 1.5 },
+        { "sku": "7UP-500", "shelf_units": 44, "sold_last_24h": 58, "sold_last_6h": 15, "velocity_per_hour": 2.4 }
+      ]
+    }
+  ],
+  "sku_summary": [
+    {
+      "sku": "LAYS-MAS-70",
+      "product_name": "Lays Masala 70g",
+      "total_shelf_units_across_outlets": 142,
+      "units_sold_last_24h": 892,
+      "units_sold_last_6h": 228,
+      "avg_velocity_per_hour": 58,
+      "outlets_at_zero_stock": 6,
+      "outlets_reporting": 38,
+      "projected_stockout_hours": 2.4,
+      "revenue_last_24h_pkr": 606560,
+      "crisis_flag": true,
+      "crisis_reason": "6 outlets at zero. Remaining 142 units across 32 outlets. At current velocity: stockout in 2.4h."
+    },
+    {
+      "sku": "PEPSI-RG-500",
+      "product_name": "Pepsi Regular 500ml",
+      "total_shelf_units_across_outlets": 702,
+      "units_sold_last_24h": 771,
+      "avg_velocity_per_hour": 32,
+      "outlets_at_zero_stock": 0,
+      "crisis_flag": false
+    },
+    {
+      "sku": "MTNDEV-500",
+      "product_name": "Mountain Dew 500ml",
+      "total_shelf_units_across_outlets": 577,
+      "units_sold_last_24h": 811,
+      "avg_velocity_per_hour": 34,
+      "outlets_at_zero_stock": 0,
+      "crisis_flag": false
+    },
+    {
+      "sku": "LAYS-CHE-40",
+      "product_name": "Lays Cheese & Onion 40g",
+      "total_shelf_units_across_outlets": 108,
+      "units_sold_last_24h": 133,
+      "avg_velocity_per_hour": 6,
+      "outlets_at_zero_stock": 0,
+      "crisis_flag": false
+    },
+    {
+      "sku": "KURK-MAS-42",
+      "product_name": "Kurkure Masala Munch 42g",
+      "total_shelf_units_across_outlets": 92,
+      "units_sold_last_24h": 122,
+      "avg_velocity_per_hour": 5,
+      "outlets_at_zero_stock": 0,
+      "crisis_flag": false
+    }
+  ]
+}

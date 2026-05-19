@@ -1,0 +1,118 @@
+{
+  "scrape_timestamp": "2026-05-18T08:30:00Z",
+  "sources": ["Dawn Business", "The News International", "Geo Business", "Business Recorder", "ARY News"],
+  "articles": [
+    {
+      "article_id": "NW-001",
+      "headline": "PepsiCo Lahore factory workers on strike — snack production halted",
+      "outlet": "Dawn Business",
+      "published_at": "2026-05-18T06:00:00Z",
+      "url": "dawn.com/business/2026/05/18/pepsico-strike",
+      "summary": "Workers at PepsiCo's Lahore manufacturing plant went on strike early Tuesday morning demanding a 25% wage increase. Production of snack lines including Lays, Kurkure, Cheetos, and Doritos has been halted. Management is in negotiations. The work stoppage began at 05:30 and roughly 1,200 workers are involved. No production has resumed as of 06:00.",
+      "affected_brands": ["Lays", "Kurkure", "Cheetos", "Doritos"],
+      "affected_company": "PepsiCo Pakistan",
+      "affected_facility": "Lahore Manufacturing Plant",
+      "severity": "high",
+      "credibility": 0.82,
+      "tags": ["strike", "production_halt", "snacks", "lahore"]
+    },
+    {
+      "article_id": "NW-002",
+      "headline": "N-55 highway blocked near Sheikhupura — Lahore-Karachi logistics severely disrupted",
+      "outlet": "Geo Business",
+      "published_at": "2026-05-18T07:15:00Z",
+      "url": "geo.tv/business/2026/05/18/n55-blockage",
+      "summary": "A large protest near Sheikhupura has blocked the N-55 national highway, the primary artery connecting Lahore's industrial zone to Karachi. Hundreds of trucks and cargo vehicles are stranded. Logistics companies are reporting average delays of 6-10 hours. Alternative routes via M-2 motorway are congested. FMCG distributors in Karachi are being advised to expect supply delays for goods manufactured in Lahore.",
+      "affected_routes": ["N-55 Lahore-Karachi"],
+      "alternative_routes": ["M-2 motorway (congested)"],
+      "estimated_delay_hours": "6-10",
+      "severity": "high",
+      "credibility": 0.88,
+      "tags": ["logistics", "n55", "blockage", "karachi_supply", "lahore"]
+    },
+    {
+      "article_id": "NW-003",
+      "headline": "FMCG distributors in Karachi brace for Lahore supply shock",
+      "outlet": "Business Recorder",
+      "published_at": "2026-05-18T08:00:00Z",
+      "url": "brecorder.com/2026/05/18/fmcg-supply-shock",
+      "summary": "Trade bodies representing FMCG distributors in Karachi have raised alarm over potential stock shortages of Lahore-manufactured products following the PepsiCo strike and N-55 blockage. Sources say shelf stock of Lays and Kurkure is already running critically low at major retail chains. One distributor said: 'We have 2-3 hours of stock left at our premium outlets. If the highway isn't cleared by evening, we'll be completely out by midnight.' Experts predict price surges of 15-25% on affected SKUs if the disruption extends beyond 48 hours.",
+      "affected_categories": ["Snacks", "Beverages"],
+      "price_surge_forecast_pct": "15-25",
+      "severity": "critical",
+      "credibility": 0.75,
+      "tags": ["karachi", "fmcg", "shortage", "supply_chain", "price_surge"]
+    },
+    {
+      "article_id": "NW-004",
+      "headline": "PepsiCo management enters talks with union — resolution expected within 24-48 hours",
+      "outlet": "The News International",
+      "published_at": "2026-05-18T08:45:00Z",
+      "url": "thenews.com.pk/2026/05/18/pepsico-talks",
+      "summary": "PepsiCo Pakistan management has entered formal negotiations with the striking workers' union. Senior management confirmed to our reporter that both sides are 'close to an agreement' on revised wage terms. Production is expected to resume within 24-48 hours if talks succeed. In the meantime, PepsiCo said it would activate its Karachi facility for some snack lines but capacity is limited. Analysts warn the 48-hour gap could cause significant retail shortages across Karachi and interior Sindh.",
+      "resolution_estimate_hours": "24-48",
+      "severity": "medium",
+      "credibility": 0.72,
+      "tags": ["pepsico", "strike_resolution", "talks", "production_resume"]
+    },
+    {
+      "article_id": "NW-005",
+      "headline": "Mehran Foods eyes market share amid Lays shortage — ramps up production",
+      "outlet": "ARY News Business",
+      "published_at": "2026-05-18T09:00:00Z",
+      "url": "arynews.tv/business/2026/05/18/mehran-foods",
+      "summary": "Mehran Foods, a Karachi-based snack manufacturer, announced it has ramped up production of its 70g masala snack range to meet demand created by the Lays Masala shortage. CEO confirmed the company has 500,000 units ready for immediate dispatch and is in talks with several major distributors. 'We have the capacity and the inventory. This is an opportunity,' the CEO said. Industry observers note that Mehran Foods' masala snack line is a close substitute for Lays Masala and has seen a 340% spike in search queries on grocery apps today.",
+      "company": "Mehran Foods",
+      "units_available": 500000,
+      "severity": "low",
+      "opportunity": "backup_supplier_available",
+      "credibility": 0.78,
+      "tags": ["mehran_foods", "substitute", "backup_supplier", "opportunity"]
+    },
+    {
+      "article_id": "NW-006",
+      "headline": "Imtiaz, Carrefour report surge in complaints over Lays Masala stock-outs",
+      "outlet": "Dawn Business",
+      "published_at": "2026-05-18T09:30:00Z",
+      "url": "dawn.com/business/2026/05/18/lays-stockout-karachi",
+      "summary": "Pakistan's largest retail chains have confirmed they are receiving an unusually high volume of customer complaints about the absence of Lays Masala 70g from store shelves. Imtiaz Superstore's customer service head confirmed 'dozens of complaints today morning alone'. Social media is awash with posts from Karachi consumers unable to find the product. Analysts estimate the retail revenue impact at PKR 4-5 million per day if the stock-out persists across all outlets in the city.",
+      "revenue_impact_daily_pkr": "4000000-5000000",
+      "outlets_mentioned": ["Imtiaz DHA", "Imtiaz Gulshan", "Carrefour Tariq Road", "Metro Clifton"],
+      "severity": "high",
+      "credibility": 0.85,
+      "tags": ["retail", "stockout", "consumer_complaints", "karachi", "lays"]
+    },
+    {
+      "article_id": "NW-007",
+      "headline": "Pakistan logistics sector warns of broader supply chain risk from N-55 closure",
+      "outlet": "Business Recorder",
+      "published_at": "2026-05-18T07:45:00Z",
+      "url": "brecorder.com/2026/05/18/logistics-n55-risk",
+      "summary": "The Pakistan Logistics Council has warned that the N-55 blockage near Sheikhupura is creating a cascading effect across multiple FMCG supply chains. Beyond snacks, pharmaceuticals, textiles, and consumer electronics shipments from Lahore to Karachi are also impacted. The council is calling on the government to open alternative routes. Some companies have begun using more expensive air freight for high-priority shipments, adding 400-600% to logistics costs.",
+      "industries_affected": ["FMCG", "Pharmaceuticals", "Textiles", "Consumer Electronics"],
+      "severity": "high",
+      "credibility": 0.80,
+      "tags": ["logistics", "n55", "supply_chain", "multi_industry"]
+    },
+    {
+      "article_id": "NW-008",
+      "headline": "Grocery app searches for 'Lays Masala' up 2,400% in Karachi today",
+      "outlet": "The News International",
+      "published_at": "2026-05-18T09:15:00Z",
+      "url": "thenews.com.pk/2026/05/18/lays-masala-search-spike",
+      "summary": "Data from Pakistan's top grocery delivery apps shows a 2,400% spike in searches for 'Lays Masala 70g' in Karachi today compared to the same time yesterday. Several apps have added the product to 'Currently Unavailable' lists. Consumer behaviour analysts note this pattern typically precedes panic buying and further depletion of remaining stock. Substitute snack products like Kurkure, Doritos, and local masala chips have seen 80-150% search volume increases.",
+      "search_spike_pct": 2400,
+      "substitute_spike_pct": "80-150",
+      "severity": "medium",
+      "credibility": 0.70,
+      "tags": ["consumer_behavior", "demand_signal", "grocery_apps", "karachi"]
+    }
+  ],
+  "risk_summary": {
+    "primary_risk": "PepsiCo Lahore strike + N-55 blockage creating simultaneous supply halt and logistics disruption",
+    "estimated_duration_hours": "24-72",
+    "revenue_at_risk_daily_pkr": 4500000,
+    "backup_opportunity": "Mehran Foods confirmed available with 500k units and 4h lead time",
+    "confidence": "medium-high"
+  }
+}

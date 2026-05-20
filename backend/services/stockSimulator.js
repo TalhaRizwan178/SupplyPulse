@@ -11,6 +11,7 @@
 const StockLevel = require('../models/StockLevel');
 const SystemSetting = require('../models/SystemSetting');
 const PendingTrigger = require('../models/PendingTrigger');
+const { PosSkuSummary } = require('../models/DataSources');
 
 // Tick interval in ms. Override with STOCK_TICK_MS in .env.
 const TICK_MS = parseInt(process.env.STOCK_TICK_MS || '45000', 10);
@@ -52,6 +53,8 @@ function startSimulator(io) {
     try {
       const stocks = await StockLevel.find();
 
+      const ticksPerHour = 3600000 / TICK_MS;
+
       for (const item of stocks) {
         const variance = 0.8 + Math.random() * 0.4;
         const sold = Math.round(item.sales_per_tick * variance);
@@ -72,6 +75,28 @@ function startSimulator(io) {
         }
 
         await item.save();
+
+        // Update PosSkuSummary with real sales velocity from this tick
+        const instantVelocity = sold * ticksPerHour;
+        const existing = await PosSkuSummary.findOne({ sku: item.sku, organizationId: item.organizationId });
+        const avgVelocity = existing?.avg_velocity_per_hour
+          ? +(0.8 * existing.avg_velocity_per_hour + 0.2 * instantVelocity).toFixed(2)
+          : +instantVelocity.toFixed(2);
+        const projectedStockoutHours = avgVelocity > 0
+          ? +(newStock / avgVelocity).toFixed(2)
+          : null;
+
+        await PosSkuSummary.findOneAndUpdate(
+          { sku: item.sku, organizationId: item.organizationId },
+          {
+            organizationId: item.organizationId,
+            sku: item.sku,
+            avg_velocity_per_hour: avgVelocity,
+            projected_stockout_hours: projectedStockoutHours,
+            last_updated: new Date(),
+          },
+          { upsert: true }
+        );
       }
 
       // Group stocks by organizationId to emit isolated updates

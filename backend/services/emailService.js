@@ -56,22 +56,32 @@ function buildHtml({ title, badge, body, footerNote }) {
 </body></html>`;
 }
 
-function getTransporter() {
+async function getTransporter() {
   if (!process.env.SMTP_PASS) return null;
+
+  let host = 'smtp.gmail.com';
+  try {
+    const addresses = await dns.promises.resolve4('smtp.gmail.com');
+    if (addresses && addresses.length > 0) host = addresses[0];
+    console.log(`[Email] Resolved smtp.gmail.com → ${host} (IPv4)`);
+  } catch (e) {
+    console.log(`[Email] DNS resolve failed, using hostname`);
+  }
+
   return nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host,
     port: 587,
     secure: false,
-    family: 4,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
     },
+    tls: { servername: 'smtp.gmail.com' },
   });
 }
 
 async function sendEmail({ to, subject, body, badge, footerNote, htmlOverride }) {
-  const t = getTransporter();
+  const t = await getTransporter();
   const from = process.env.SMTP_FROM || process.env.SMTP_USER;
 
   if (!t) {

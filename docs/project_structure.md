@@ -20,6 +20,9 @@ supply-pulse-rn/
 │   ├── server.js             # API entrypoint, socket setup, & bootstrapping
 │   └── package.json
 │
+├── SuppluPulse apk file to download/ # Production Android application (APK) distribution
+│   └── app-release.apk       # Downloadable release binary for mobile deployment
+│
 ├── frontend/                 # React Native (Expo) mobile/web application
 │   ├── assets/               # Brand logos & static graphic assets
 │   ├── src/
@@ -32,7 +35,9 @@ supply-pulse-rn/
 │   ├── App.js                # React Native entrypoint & socket client
 │   └── package.json
 │
-└── docs/                     # System architecture, logs, & hackathon resources
+└── docs/                     # System architecture and agent pipeline documentation
+    ├── project_structure.md  # Active workspace resource registry
+    └── agent_working.md      # Multi-agent autonomous pipeline mechanics
 ```
 
 ---
@@ -127,3 +132,9 @@ The frontend is a cross-platform React Native app engineered with adaptive layou
 
 *   [project_structure.md](file:///d:/supply-pulse-rn/docs/project_structure.md): Active complete systems registry mapping all backend and frontend resources.
 *   [agent_working.md](file:///d:/supply-pulse-rn/docs/agent_working.md): Detailed operational mechanics and dynamic scoring formulas for all 11 pipeline sub-agents.
+
+---
+
+## 4. Mobile Binaries (`/SuppluPulse apk file to download/`)
+
+*   [app-release.apk](file:///d:/supply-pulse-rn/SuppluPulse%20apk%20file%20to%20download/app-release.apk): Compiled production release Android package (APK) for installation and testing of the mobile dashboard interface directly on Android hardware or simulators.

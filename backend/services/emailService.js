@@ -1,10 +1,5 @@
-const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
 const path = require('path');
-const fs = require('fs');
-const dns = require('dns');
-dns.setDefaultResultOrder('ipv4first');
-
-const LOGO_PATH = path.join(__dirname, '../assets/logo.png');
 
 const T = {
   bg:      '#272320',
@@ -56,54 +51,50 @@ function buildHtml({ title, badge, body, footerNote }) {
 </body></html>`;
 }
 
-async function getTransporter() {
-  if (!process.env.SMTP_PASS) return null;
+function buildRawEmail({ from, to, subject, html }) {
+  const boundary = 'boundary_supplypulse';
+  const mime = [
+    `From: ${from}`,
+    `To: ${to}`,
+    `Subject: ${subject}`,
+    `MIME-Version: 1.0`,
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    ``,
+    `--${boundary}`,
+    `Content-Type: text/html; charset=UTF-8`,
+    `Content-Transfer-Encoding: base64`,
+    ``,
+    Buffer.from(html).toString('base64'),
+    `--${boundary}--`,
+  ].join('\r\n');
 
-  let host = 'smtp.gmail.com';
-  try {
-    const addresses = await dns.promises.resolve4('smtp.gmail.com');
-    if (addresses && addresses.length > 0) host = addresses[0];
-    console.log(`[Email] Resolved smtp.gmail.com → ${host} (IPv4)`);
-  } catch (e) {
-    console.log(`[Email] DNS resolve failed, using hostname`);
-  }
-
-  return nodemailer.createTransport({
-    host,
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-    tls: { servername: 'smtp.gmail.com' },
-  });
+  return Buffer.from(mime).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
 async function sendEmail({ to, subject, body, badge, footerNote, htmlOverride }) {
-  const t = await getTransporter();
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER;
+  const { GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN, GMAIL_USER } = process.env;
 
-  if (!t) {
+  if (!GMAIL_CLIENT_ID || !GMAIL_REFRESH_TOKEN) {
     console.log(`[Email Mock] TO: ${to} | SUBJECT: ${subject}`);
     return { mocked: true };
   }
 
-  const hasLogo = fs.existsSync(LOGO_PATH);
-
   try {
-    const info = await t.sendMail({
-      from: `"SupplyPulse" <${from}>`,
-      to,
-      subject,
-      text: body,
-      html: htmlOverride || buildHtml({ title: subject, badge, body, footerNote }),
-      attachments: hasLogo ? [
-        { filename: 'logo.png', path: LOGO_PATH, cid: 'supplypulse-logo', contentDisposition: 'inline' },
-      ] : [],
+    const oauth2Client = new google.auth.OAuth2(GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET);
+    oauth2Client.setCredentials({ refresh_token: GMAIL_REFRESH_TOKEN });
+
+    const gmail = google.gmail({ version: 'v1', auth: oauth2Client });
+    const from = `SupplyPulse <${GMAIL_USER}>`;
+    const html = htmlOverride || buildHtml({ title: subject, badge, body, footerNote });
+    const raw = buildRawEmail({ from, to, subject, html });
+
+    const res = await gmail.users.messages.send({
+      userId: 'me',
+      requestBody: { raw },
     });
-    console.log(`[Email Sent] ${subject} → ${to} | ID: ${info.messageId}`);
-    return info;
+
+    console.log(`[Email Sent] ${subject} → ${to} | ID: ${res.data.id}`);
+    return res.data;
   } catch (err) {
     console.error(`[Email Error] ${err.message}`);
     return { error: err.message };

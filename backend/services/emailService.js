@@ -1,13 +1,6 @@
 const { google } = require('googleapis');
 const path = require('path');
-const fs = require('fs');
 
-const LOGO_PATH = path.join(__dirname, '../assets/logo.png');
-function getLogoBase64() {
-  try {
-    return 'data:image/png;base64,' + fs.readFileSync(LOGO_PATH).toString('base64');
-  } catch { return null; }
-}
 
 const T = {
   bg:      '#272320',
@@ -21,8 +14,6 @@ const T = {
 };
 
 function buildHtml({ title, badge, body, footerNote }) {
-  const logoSrc = getLogoBase64();
-  const logoTag = logoSrc ? `<img src="${logoSrc}" alt="SupplyPulse" width="56" height="56" style="display:block;margin:0 auto 14px auto;border-radius:12px;border:1px solid ${T.line};">` : '';
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8"><title>${title}</title></head>
@@ -33,7 +24,6 @@ function buildHtml({ title, badge, body, footerNote }) {
         <tr>
           <td style="background:${T.bg2};padding:28px 32px 24px;text-align:center;border-bottom:1px solid ${T.line};">
             <div style="width:48px;height:3px;background:${T.pulse};border-radius:2px;margin:0 auto 20px auto;"></div>
-            ${logoTag}
             <div style="font-size:22px;font-weight:800;color:${T.text};">Supply<span style="color:${T.pulse};">Pulse</span></div>
             <div style="font-size:11px;color:${T.text3};margin-top:4px;letter-spacing:1.5px;text-transform:uppercase;">Autonomous Supply Chain Agent</div>
             ${badge ? `<div style="display:inline-block;margin-top:16px;background:${T.pulseDim};border:1px solid ${T.pulse}33;color:${T.pulse};font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.8px;text-transform:uppercase;">${badge}</div>` : ''}

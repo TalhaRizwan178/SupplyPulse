@@ -47,6 +47,7 @@ import DirectorScreen from './src/screens/DirectorScreen';
 import AdminScreen from './src/screens/AdminScreen';
 import SupplierUploadScreen from './src/screens/SupplierUploadScreen';
 import StockMonitorScreen from './src/screens/StockMonitorScreen';
+import ComplaintLogScreen from './src/screens/ComplaintLogScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -122,6 +123,14 @@ function MainTabs() {
         options={{
           tabBarLabel: 'Stock',
           tabBarIcon: ({ color }) => <Icons.Pulse size={18} color={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="Complaints"
+        component={ComplaintLogScreen}
+        options={{
+          tabBarLabel: 'Complaints',
+          tabBarIcon: ({ color }) => <Icons.Bell size={18} color={color} />,
         }}
       />
       <Tab.Screen

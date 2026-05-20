@@ -31,8 +31,29 @@ async function runOrchestrator(scenarioId, io, triggerContext = {}) {
   const revenue_at_risk = units_needed * unit_cost_pkr * 1.25;
   const needs_human     = revenue_at_risk > HUMAN_ESCALATION_PKR;
 
+  // Fetch live POS + complaint data for urgency enrichment
+  const { PosSkuSummary, ComplaintSummary } = require('../models/DataSources');
+  const [posData, cxData] = await Promise.all([
+    PosSkuSummary.findOne({ sku, organizationId }).lean(),
+    ComplaintSummary.findOne({ sku, organizationId }).lean(),
+  ]);
+
+  // Use real POS velocity if available, else estimate from sales_per_tick
+  const tickMs = parseInt(process.env.STOCK_TICK_MS || '45000', 10);
+  const ticksPerHour = 3600000 / tickMs;
+  const salesPerHour = posData?.avg_velocity_per_hour || (triggerContext.sales_per_tick || 5) * ticksPerHour;
+  const projected_stockout_hours = posData?.projected_stockout_hours || (salesPerHour > 0 ? +(current_stock / salesPerHour).toFixed(1) : null);
+
+  const complaintUrgency = cxData?.escalation_risk || 'low';
+  const complaintCount = cxData?.total_last_6h || 0;
+
   const scenarioContext = buildScenarioContext(sku, product_name, current_stock, threshold, supplier);
-  let state = { scenarioId, sku, product_name, current_stock, threshold, scenarioContext };
+  scenarioContext.projected_stockout_hours = projected_stockout_hours;
+  scenarioContext.complaint_escalation_risk = complaintUrgency;
+  scenarioContext.complaints_last_6h = complaintCount;
+  scenarioContext.pos_sales_velocity_per_hour = salesPerHour;
+
+  let state = { scenarioId, sku, product_name, current_stock, threshold, organizationId, scenarioContext };
 
   const emitTrace = async (agentName, action, details) => {
     const trace = new Trace({ organizationId, scenarioId, agentName, action, details });
@@ -116,7 +137,9 @@ async function runOrchestrator(scenarioId, io, triggerContext = {}) {
           `SKU             : ${sku} — ${product_name}\n` +
           `Current stock   : ${current_stock} units\n` +
           `Threshold       : ${threshold} units\n` +
-          `Revenue at risk : PKR ${revenue_at_risk.toLocaleString()}\n\n` +
+          `Revenue at risk : PKR ${revenue_at_risk.toLocaleString()}\n` +
+          `Stockout in     : ${projected_stockout_hours ? projected_stockout_hours + ' hours' : 'unknown'}\n` +
+          `Complaints (6h) : ${complaintCount} (risk: ${complaintUrgency})\n\n` +
           `The agent will PROCEED AUTONOMOUSLY in 10 minutes if no override is received.\n\n` +
           `— SupplyPulse Autonomous Agent`,
       });

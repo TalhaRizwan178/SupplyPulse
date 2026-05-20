@@ -106,6 +106,7 @@ app.use('/api/execution', require('./routes/execution'));
 app.use('/api/suppliers', require('./routes/suppliers'));
 app.use('/api/stock', require('./routes/stock'));
 app.use('/api/settings', require('./routes/settings'));
+app.use('/api/complaints', require('./routes/complaints'));
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {

@@ -11,6 +11,10 @@ import { getBackendUrl } from '../utils/api';
 import useAppStore from '../store/useAppStore';
 
 const BASE = getBackendUrl();
+const getAuthHeaders = () => {
+  const token = require('../store/useAppStore').default.getState().authToken;
+  return { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) };
+};
 
 function StatusDot({ status, T }) {
   const pulse = React.useRef(new Animated.Value(1)).current;
@@ -52,7 +56,7 @@ function AdjustModal({ item, onClose, onDone, T }) {
     try {
       const res = await fetch(`${BASE}/api/stock/adjust`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
         body: JSON.stringify({ sku: item.sku, amount: sign * n, reason: reason || undefined }),
       });
       const data = await res.json();
@@ -134,7 +138,7 @@ function AddProductModal({ onClose, onDone, T }) {
     try {
       const res = await fetch(`${BASE}/api/stock/product`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
         body: JSON.stringify({
           sku: sku.trim().toUpperCase(), product_name: product_name.trim(),
           category: category.trim(), initial_stock: parseInt(initial_stock) || 0,
@@ -232,7 +236,7 @@ export default function StockMonitorScreen() {
     try {
       await fetch(`${BASE}/api/settings`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
         body: JSON.stringify({ key: 'autoTriggerEnabled', value: next }),
       });
     } catch { setAutoTriggerEnabled(!next); }
@@ -241,7 +245,7 @@ export default function StockMonitorScreen() {
 
   const resetStock = async () => {
     setResetting(true);
-    try { await fetch(`${BASE}/api/stock/reset`, { method: 'POST' }); }
+    try { await fetch(`${BASE}/api/stock/reset`, { method: 'POST', headers: getAuthHeaders() }); }
     finally { setResetting(false); }
   };
 

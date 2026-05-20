@@ -9,7 +9,8 @@ const {
 // DATA LOADER — queries MongoDB at runtime for the triggered SKU
 // ─────────────────────────────────────────────────────────────────────────────
 
-async function buildSources(sku) {
+async function buildSources(sku, organizationId) {
+  const orgFilter = organizationId ? { organizationId } : {};
   const [
     whRow, posSku, allWh,
     posOutlets, posMeta,
@@ -17,17 +18,17 @@ async function buildSources(sku) {
     cxSummary, complaints,
     topNews, newsMeta,
   ] = await Promise.all([
-    WarehouseItem.findOne({ sku }).lean(),
-    PosSkuSummary.findOne({ sku }).lean(),
-    WarehouseItem.find({}).lean(),
-    PosOutlet.find({ 'skus.sku': sku }).lean(),
-    FeedMeta.findOne({ source: 'pos' }).lean(),
-    SupplierEmailThread.findOne({ sku }).lean(),
-    SupplierEmailThread.findOne({ thread_id: 'TH-ALERT-01' }).lean(),
-    ComplaintSummary.findOne({ sku }).lean(),
-    Complaint.find({ sku }).lean(),
-    NewsArticle.find({ severity: { $in: ['high', 'critical'] } }).lean(),
-    FeedMeta.findOne({ source: 'news' }).lean(),
+    WarehouseItem.findOne({ sku, ...orgFilter }).lean(),
+    PosSkuSummary.findOne({ sku, ...orgFilter }).lean(),
+    WarehouseItem.find({ ...orgFilter }).lean(),
+    PosOutlet.find({ 'skus.sku': sku, ...orgFilter }).lean(),
+    FeedMeta.findOne({ source: 'pos', ...orgFilter }).lean(),
+    SupplierEmailThread.findOne({ sku, ...orgFilter }).lean(),
+    SupplierEmailThread.findOne({ thread_id: 'TH-ALERT-01', ...orgFilter }).lean(),
+    ComplaintSummary.findOne({ sku, ...orgFilter }).lean(),
+    Complaint.find({ sku, ...orgFilter }).lean(),
+    NewsArticle.find({ severity: { $in: ['high', 'critical'] }, ...orgFilter }).lean(),
+    FeedMeta.findOne({ source: 'news', ...orgFilter }).lean(),
   ]);
 
   const wh = whRow || {};
@@ -201,7 +202,7 @@ const agents = {
 
   IngestionAgent: async (input) => {
     // Build live sources and context from MongoDB for this specific SKU
-    const liveSources  = await buildSources(input.sku || 'LAYS-MAS-70');
+    const liveSources  = await buildSources(input.sku || 'LAYS-MAS-70', input.organizationId);
     const liveScenario = buildScenarioContext(
       input.sku, input.product_name, input.current_stock, input.threshold, input.supplier
     );

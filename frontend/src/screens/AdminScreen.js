@@ -124,6 +124,8 @@ export default function AdminScreen({ navigation }) {
                 placeholder="••••••••"
                 placeholderTextColor={t.text3}
                 secureTextEntry={!showPassword}
+                autoCapitalize="none"
+                autoCorrect={false}
                 value={password}
                 onChangeText={setPassword}
               />
@@ -230,6 +232,8 @@ export default function AdminScreen({ navigation }) {
                 style={[styles.inputText, { color: t.text, flex: 1, outlineStyle: 'none' }]}
                 placeholder="Password to send"
                 placeholderTextColor={t.text3}
+                autoCapitalize="none"
+                autoCorrect={false}
                 value={resendPassword}
                 onChangeText={setResendPassword}
                 autoFocus

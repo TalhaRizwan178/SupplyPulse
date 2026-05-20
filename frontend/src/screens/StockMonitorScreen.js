@@ -200,18 +200,19 @@ export default function StockMonitorScreen() {
   const [showAddProduct, setShowAddProduct] = useState(false);
 
   const refreshStocks = () => {
-    fetch(`${BASE}/api/stock`).then(r => r.json()).then(d => { if (Array.isArray(d)) setStocks(d); }).catch(() => {});
+    fetch(`${BASE}/api/stock`, { headers: getAuthHeaders() }).then(r => r.json()).then(d => { if (Array.isArray(d)) setStocks(d); }).catch(() => {});
   };
 
   useEffect(() => {
-    fetch(`${BASE}/api/stock`)
+    fetch(`${BASE}/api/stock`, { headers: getAuthHeaders() })
       .then(r => r.json())
       .then(d => { setStocks(Array.isArray(d) ? d : []); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);
 
   useEffect(() => {
-    const socket = io(BASE);
+    const token = getAuthHeaders().Authorization?.replace('Bearer ', '');
+    const socket = io(BASE, { auth: { token }, query: { token } });
     socket.on('stock_update', (newData) => {
       setStocks(prev => {
         const prevMap = {};

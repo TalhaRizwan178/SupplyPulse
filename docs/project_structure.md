@@ -47,10 +47,23 @@ The backend operates as an event-driven, tenant-isolated API server coupled with
 
 ### `/backend/controllers/`
 *   `authController.js`: Manages organization signup, user creation, user credentials resends, and standard/SSO user login.
-*   `crisisController.js`: Manages crisis feeds and logs.
-*   `dashboardController.js`: Aggregates director portfolio budgets and regional metrics.
+*   `crisisController.js`: Manages crisis feeds, active issues, and resolution states.
+*   `dashboardController.js`: Aggregates director portfolio budgets, safety stocks, and regional metrics.
+*   `dataController.js`: Handles seeding of mock crises and data sources (WH, POS, Email, Complaints, News) for new tenant organizations, and exposes routes to fetch active feeds.
 *   `executionController.js`: Provides action plans, execution stages, and post-resolution outcomes.
-*   `supplierController.js`: Feeds active SKU supplier maps.
+*   `supplierController.js`: Feeds active tenant-isolated SKU supplier maps.
+
+### `/backend/routes/`
+*   `agents.js`: Exposes endpoints to trigger background orchestrator agent runs.
+*   `auth.js`: Handles user authentication, credential retrieval, and tenant onboarding routes.
+*   `complaints.js`: Manages logging and fetching customer complaints.
+*   `crisis.js`: Retrieves active or resolved supply chain crisis records.
+*   `dashboard.js`: Exposes aggregated director analytics and high-level KPI cards.
+*   `data.js`: Provides setup routes to manage and clear simulation feeds.
+*   `execution.js`: Fetches progress logs, action chains, and execution history.
+*   `settings.js`: Handles automated autonomy triggers and safety bounds adjustments.
+*   `stock.js`: Manages standard inventory counts, threshold definitions, and manual adjustments.
+*   `suppliers.js`: Exposes supplier catalogs and mappings.
 
 ### `/backend/middleware/`
 *   `authMiddleware.js`: Validates Bearer JWTs and stamps `req.user`.
@@ -90,6 +103,16 @@ The frontend is a cross-platform React Native app engineered with adaptive layou
 *   `AdminScreen.js`: Scoped member invite panel for admins.
 *   `DirectorScreen.js`: High-level aggregated statistics dashboard.
 *   `AnalystScreen.js`: Analytical view of operations.
+*   `ApprovalScreen.js`: Form interface for human-in-the-loop review of high-value actions exceeding budget bounds.
+*   `ComplaintLogScreen.js`: Form to log customer complaints (such as out of stock reports) directly into the tenant stream.
+*   `ContradictionScreen.js`: Details data discrepancies (e.g., WH vs POS) alongside calculated credibility ratings.
+*   `DetailScreen.js`: Deep dive into an inventory item showing safety bounds, velocities, and source logs.
+*   `ExecutionScreen.js`: Visualizes the execution steps of the action chain in real-time.
+*   `FailureScreen.js`: Shows simulated execution errors and recovery agent interventions.
+*   `OutcomesScreen.js`: Highlights post-crisis metrics, revenue saved, and outlets replenished.
+*   `SSOScreen.js`: Screen for single sign-on authentication flow.
+*   `SplashScreen.js`: Handles startup token checks and initial redirection.
+*   `SupplierUploadScreen.js`: Allows uploading and mapping new supplier catalogs.
 
 ### `/frontend/src/components/`
 *   `Atoms.js`: Core components (Pills, AppBars, Cards, Buttons, and loaders) styled around our theme context.
@@ -102,6 +125,5 @@ The frontend is a cross-platform React Native app engineered with adaptive layou
 
 ## 3. Documentation Assets (`/docs/`)
 
-*   `agentic_autonomy.md`: System design detailing closed-loop agent logic and runtime independence for judges.
-*   `decision_log.md`: Chronological log of key architectural decisions made during development.
-*   `workplan.md`: Full implementation workplan for reference.
+*   [project_structure.md](file:///d:/supply-pulse-rn/docs/project_structure.md): Active complete systems registry mapping all backend and frontend resources.
+*   [agent_working.md](file:///d:/supply-pulse-rn/docs/agent_working.md): Detailed operational mechanics and dynamic scoring formulas for all 11 pipeline sub-agents.
